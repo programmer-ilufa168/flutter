@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ilufa_168/pages/home/home_page.dart';
 import 'package:ilufa_168/pages/account/account_page.dart';
+import 'package:ilufa_168/pages/promo/promo_page.dart';
+import 'package:ilufa_168/pages/riwayat/riwayat_page.dart';
+import 'package:ilufa_168/pages/barcode/barcode_page.dart';
 
 import 'dashboard_controller.dart';
 
@@ -19,8 +22,9 @@ class DashboardPage extends StatelessWidget {
               index: controller.tabIndex,
               children: [
                 HomePage(),
-                // PromoPage(),
-                // MemberPage(),
+                PromoPage(),
+                BarcodePage(),
+                RiwayatPage(),
                 AccountPage(),
               ],
             ),
@@ -49,7 +53,7 @@ class DashboardPage extends StatelessWidget {
                 label: 'Barcode',
               ),
               _bottomNavigationBarItem(
-                icon: CupertinoIcons.bell,
+                icon: CupertinoIcons.dial,
                 label: 'Alerts',
               ),
               _bottomNavigationBarItem(

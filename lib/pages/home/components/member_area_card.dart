@@ -13,68 +13,18 @@ class MemberAreaCard extends StatelessWidget {
       child: Container(
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-            color: Colors.orange,
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Color.fromARGB(255, 255, 94, 0),
+                  Color.fromARGB(255, 241, 88, 0)
+                ]),
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: GridView.count(
             crossAxisCount: 5,
             // ignore: sort_child_properties_last
-            children: [
-              // ignore: avoid_unnecessary_containers
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    const Icon(
-                      Icons.home,
-                      color: Colors.white,
-                    ),
-                    const Text("Home", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              // ignore: avoid_unnecessary_containers
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    const Icon(
-                      Icons.account_circle,
-                      color: Colors.white,
-                    ),
-                    const Text("Account", style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              // ignore: avoid_unnecessary_containers
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children: [
-                    const Icon(
-                      Icons.message,
-                      color: Colors.white,
-                    ),
-                    const Text("Messages",
-                        style: TextStyle(color: Colors.white))
-                  ],
-                ),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  const Icon(
-                    Icons.list_alt,
-                    color: Colors.white,
-                  ),
-                  const Text("Orders", style: TextStyle(color: Colors.white))
-                ],
-              ),
-            ],
             padding: const EdgeInsets.all(2),
             shrinkWrap: true,
             mainAxisSpacing: 5,
