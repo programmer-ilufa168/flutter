@@ -13,12 +13,14 @@ class MemberAreaCard extends StatelessWidget {
       child: Container(
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
+            // ignore: prefer_const_constructors
             gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
+                // ignore: prefer_const_literals_to_create_immutables
                 colors: [
-                  Color.fromARGB(255, 255, 94, 0),
-                  Color.fromARGB(255, 241, 88, 0)
+                  const Color.fromARGB(255, 255, 94, 0),
+                  const Color.fromARGB(255, 241, 88, 0)
                 ]),
             borderRadius: BorderRadius.circular(10.0),
           ),
